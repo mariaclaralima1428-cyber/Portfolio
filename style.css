@@ -1,0 +1,79 @@
+body {
+    background: linear-gradient(135deg, #0a1f44, #142850);
+    color: #d4af37;
+    font-family: Arial, sans-serif;
+}
+
+.inicio {
+    padding: 40px;
+}
+
+.topo {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.sobre {
+    flex: 1;
+}
+
+.foto {
+    width: 480px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 1000px;
+}
+
+
+/* Skills*/
+.Skills{
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    justify-content: space-around;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+/*Projetos*/
+h1{  /*Todos fora das seções*/
+    text-align: left;
+    margin-left: 50px;
+}
+
+.projetos {
+    display: flex;
+    margin-top: px;
+    padding: 40px;
+    justify-content:space-around;
+    gap: 40px;
+   
+}
+.sites{
+    width: 200px;
+    height: 190px;
+
+}
+
+.ft-site{
+    width: 130px;
+    height: 100px;
+}
+
+/*Certificados*/
+.certificados{
+    display: flex;
+    justify-content: space-around;
+}
+
+.ft-c{
+    width:200px;
+    height: 100px;
+}
