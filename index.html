@@ -5,110 +5,198 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
 </head>
-<body>
-    <section class="inicio">
 
-    <div class="topo">
-        <h1>Meu Portfólio</h1>
-        <p>Técnica de T.I</p>
+<body>
+  
+  <div class="menu">
+      <nav>
+        <ul>
+          <li><a href="#inicio" class="active">Início</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#certificados">Certificados</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
     </div>
+
+    <section class="card-secao reveal" id="inicio">
+
+    
 
     <div class="conteudo">
-        <div class="sobre">
-            <h2>Sobre mim</h2>
-            <p>...........................................</p>
-            <p>...........................................</p>
-            <p>...........................................</p>
-            <p>...........................................</p>
-            <p>...........................................</p>
-        </div>
+      <div class="sobre">
+        <h1 class="nome">Maria Clara</h1>
+        <p>
+          Sou estudante de Informática e tenho 17 anos.
+          Tenho várias habilidades na área da tecnologia 
+          e estou buscando aprimorar minhas habilidades fullstack,
+          também tenho experiência em robótica com robôs ev6 e arduino
+          com participação em competições de seguidor de linha.
+        </p>
+      </div>
 
-        <img src="https://i.pinimg.com/1200x/46/b2/13/46b2134c63e73d3dc342fda4d44fe990.jpg" alt="foto-ilustrativa" class="foto">
+      <img src="https://i.pinimg.com/1200x/46/b2/13/46b2134c63e73d3dc342fda4d44fe990.jpg"
+           alt="foto-ilustrativa" class="foto">
+    </div>
+
+    <div class="especialidades">
+      Web <span class="ponto">✦</span> Design
+      <span class="ponto">✦</span> Robótica
+      <span class="ponto">✦</span> Arduino
     </div>
 
 </section>
 
-<section class="Skills">
-    <div class="Hard">
-        <h2>Habilidades técnicas</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Java</li>
-            <li>GitHub</li>
-        </ul>
+
+<section class="card-secao reveal" id="skills">
+
+<h1>Habilidades</h1>
+
+<div class="skills-container">
+
+    <!-- HARD SKILLS -->
+    <div class="hard-skills">
+      <h3>Hard Skills</h3>
+
+      <div class="skill">
+        <span>HTML & CSS</span>
+        <div class="barra">
+          <div class="progresso html"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span>JavaScript</span>
+        <div class="barra">
+          <div class="progresso js"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span>Arduino</span>
+        <div class="barra">
+          <div class="progresso arduino"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span>GitHub</span>
+        <div class="barra">
+          <div class="progresso github"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span>Design</span>
+        <div class="barra">
+          <div class="progresso design"></div>
+        </div>
+      </div>
+
     </div>
 
-    <div class="Soft">
-        <h2>Habilidades comportamentais</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Java</li>
-            <li>GitHub</li>
-        </ul>
+    <!-- SOFT SKILLS -->
+    <div class="soft-skills">
+      <h3>Soft Skills</h3>
+
+      <div class="soft-container">
+        <span>Comunicação</span>
+        <span>Liderança</span>
+        <span>Organização</span>
+        <span>Criatividade</span>
+        <span>Trabalho em Equipe</span>
+      </div>
+
     </div>
+
+  </div>
+</section>
+
+
+<section class="card-secao reveal" id="projetos">
+
+ <h1 id="projetos">Projetos</h1>
+
+ <div class="projetos-container">
+
+    <a href="https://seusite1.com" target="_blank" class="card">
+        <div class="imagem">
+            <img src="https://i.pinimg.com/736x/aa/35/a1/aa35a1bcf6d684a191e3a10e4ac08e75.jpg">
+        </div>
+        <div class="info">
+            <h3>Doceria</h3>
+            <p>Site moderno para doceria local</p>
+        </div>
+    </a>
+
+    <a href="https://seusite2.com" target="_blank" class="card">
+        <div class="imagem">
+            <img src="https://i.pinimg.com/736x/aa/35/a1/aa35a1bcf6d684a191e3a10e4ac08e75.jpg">
+        </div>
+        <div class="info">
+            <h3>Hotelaria</h3>
+            <p>Site institucional elegante</p>
+        </div>
+    </a>
+
+    <a href="https://seusite3.com" target="_blank" class="card">
+        <div class="imagem">
+            <img src="https://i.pinimg.com/736x/aa/35/a1/aa35a1bcf6d684a191e3a10e4ac08e75.jpg">
+        </div>
+        <div class="info">
+            <h3>Landing Page</h3>
+            <p>Página focada em conversão</p>
+        </div>
+    </a>
+ </div>
+</section>
+
+ <section class="card-secao reveal" id="certificados">
+
+  <h1>Certificados</h1>
+
+  <div class="certificados-container">
+
+    <div class="certificado">
+      <img src="https://i.pinimg.com/736x/aa/35/a1/aa35a1bcf6d684a191e3a10e4ac08e75.jpg">
+      <div class="cert-info">
+        <h3>HTML e CSS</h3>
+        <p>Curso de desenvolvimento web básico</p>
+      </div>
+    </div>
+
+    <div class="certificado">
+      <img src="https://i.pinimg.com/736x/aa/35/a1/aa35a1bcf6d684a191e3a10e4ac08e75.jpg">
+      <div class="cert-info">
+        <h3>JavaScript</h3>
+        <p>Fundamentos de programação web</p>
+      </div>
+    </div>
+
+    <div class="certificado">
+      <img src="https://i.pinimg.com/736x/aa/35/a1/aa35a1bcf6d684a191e3a10e4ac08e75.jpg">
+      <div class="cert-info">
+        <h3>Robótica com Arduino</h3>
+        <p>Programação e automação de robôs</p>
+      </div>
+    </div>
+
+  </div>
 
 </section>
 
-<h1>Projetos</h1>
-<section class="projetos">
-    
-    <div class="sites">
-        <img src="https://i.pinimg.com/736x/aa/35/a1/aa35a1bcf6d684a191e3a10e4ac08e75.jpg" class="ft-site">
-        <div>
-            <h1>Doceria</h1>
-            <p>Site de uma doceria local</p>
-        </div>
-    </div>
 
-    <div class="sites">
-      <img src="https://i.pinimg.com/736x/aa/35/a1/aa35a1bcf6d684a191e3a10e4ac08e75.jpg" class="ft-site">
-        <div>
-            <h1>Hotelaria</h1>
-            <p>Site de uma doceria local</p>
-        </div>
-    </div>
-    <div>
-       <img src="https://i.pinimg.com/736x/aa/35/a1/aa35a1bcf6d684a191e3a10e4ac08e75.jpg" class="ft-site">
-        <div class="sites">
-            <h1>Sla</h1>
-            <p>Site de uma doceria local</p>
-        </div>
-    </div>
-
-</section>
-
- <h1>Certificados</h1>
-<section class="certificados">
-   
-    <div>
-        <img src="https://i.pinimg.com/1200x/51/b7/4b/51b74b18a185413286babc9ea444d3e5.jpg" class="ft-c">
-        <h2>Certificado 1</h2>
-    </div>
-    <div>
-        <img src="https://i.pinimg.com/1200x/51/b7/4b/51b74b18a185413286babc9ea444d3e5.jpg" class="ft-c">
-        <h2>Certificado 2</h2>
-    </div>
-    <div>
-        <img src="https://i.pinimg.com/1200x/51/b7/4b/51b74b18a185413286babc9ea444d3e5.jpg" class="ft-c">
-        <h2>Certificado 3</h2>
-    </div>
-    <div>
-        <img src="https://i.pinimg.com/1200x/51/b7/4b/51b74b18a185413286babc9ea444d3e5.jpg" class="ft-c">
-        <h2>Certificado 4</h2>
-    </div>
-
-</section>
-
-<footer>
+<footer id="contato">
     <P>Contate-me</P>
     <p>email: mariaclaralima1428@gmail.com</p>
     
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
