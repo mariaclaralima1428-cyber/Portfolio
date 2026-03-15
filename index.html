@@ -12,6 +12,7 @@
 </head>
 
 <body>
+  <div class="estrelas"></div>
 
   <div class="menu">
     <nav>
@@ -47,8 +48,7 @@
         </p>
       </div>
 
-      <img src="https://i.pinimg.com/1200x/46/b2/13/46b2134c63e73d3dc342fda4d44fe990.jpg" alt="foto-ilustrativa"
-        class="foto">
+      <img src="img/3.png" alt="foto-ilustrativa" class="foto">
     </div>
 
     <div class="especialidades">
@@ -85,9 +85,9 @@
         </div>
 
         <div class="skill">
-          <span>Arduino</span>
+          <span>Tinkercard</span>
           <div class="barra">
-            <div class="progresso arduino"></div>
+            <div class="progresso tinkercard"></div>
           </div>
         </div>
 
@@ -159,9 +159,9 @@
         </div>
       </a>
 
-      <a href="https://seusite3.com" target="_blank" class="card">
+      <a href="robotica.html" _blank" class="card">
         <div class="imagem">
-          <img src="https://i.pinimg.com/736x/aa/35/a1/aa35a1bcf6d684a191e3a10e4ac08e75.jpg">
+          <img src="img/0.jpg">
         </div>
         <div class="info">
           <h3>Robótica</h3>
@@ -184,56 +184,45 @@
         <div class="certificados-container" id="slider">
 
           <div class="certificado">
-            <img src="https://i.pinimg.com/736x/aa/35/a1/aa35a1bcf6d684a191e3a10e4ac08e75.jpg">
-            <div class="cert-info">
-              <h3>Redes</h3>
-              <p>Fundamentos de programação web</p>
-            </div>
+            <img src="img/IMG-20260305-WA0035.jpg" onclick="abrir(this.src)">
           </div>
 
           <div class="certificado">
-            <img src="https://i.pinimg.com/736x/aa/35/a1/aa35a1bcf6d684a191e3a10e4ac08e75.jpg">
-            <div class="cert-info">
-              <h3>Fábrica de programadores</h3>
-              <p>Programação e automação de robôs</p>
-            </div>
+            <img src="img/certificadoUANE.png" onclick="abrir(this.src)">
           </div>
 
           <div class="certificado">
-            <img src="https://i.pinimg.com/736x/aa/35/a1/aa35a1bcf6d684a191e3a10e4ac08e75.jpg">
-            <div class="cert-info">
-              <h3>Cloud</h3>
-              <p>Lógica de programação</p>
-            </div>
+            <img src="img/FDC.png" onclick="abrir(this.src)">
           </div>
 
           <div class="certificado">
-            <img src="https://i.pinimg.com/736x/aa/35/a1/aa35a1bcf6d684a191e3a10e4ac08e75.jpg">
-            <div class="cert-info">
-              <h3>Feira do conhecimento</h3>
-              <p>Lógica de programação</p>
-            </div>
+            <img src="img/inforBasic.png" onclick="abrir(this.src)">
           </div>
 
           <div class="certificado">
-            <img src="https://i.pinimg.com/736x/aa/35/a1/aa35a1bcf6d684a191e3a10e4ac08e75.jpg">
-            <div class="cert-info">
-              <h3>Informática básica</h3>
-              <p>Lógica de programação</p>
-            </div>
+            <img src="img/cert5.jpg" onclick="abrir(this.src)">
           </div>
 
         </div>
+
       </div>
 
       <button class="seta direita" onclick="mover(1)">❯</button>
 
     </div>
+
   </section>
+
+  <!-- POPUP -->
+
+  <div id="popup" class="popup">
+    <span class="fechar" onclick="fechar()">✕</span>
+    <img id="imgPopup">
+  </div>
 
 
   <footer class="footer" id="contato">
-    
+
 
     <div class="footer-content">
 
@@ -243,7 +232,8 @@
 
       <div class="footer-links">
 
-        <a href="#" target="_blank">
+        <a href="https://www.linkedin.com/public-profile/settings/?trk=d_flagship3_profile_self_view_public_profile&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BYddkSG9WTTiOdw2Gfbp%2FYA%3D%3D"
+          target="_blank">
           <i class="fa-brands fa-linkedin"></i>
           LinkedIn
         </a>
@@ -258,7 +248,7 @@
           Instagram
         </a>
 
-        <a href="#" target="_blank">
+        <a href="https://www.canva.com/design/DAHC_ZOpOX4/fWGCr5a09H4eAVRf7RyCAg/edit" target="_blank">
           <i class="fa-solid fa-file"></i>
           Currículo
         </a>
@@ -270,7 +260,7 @@
       </p>
 
     </div>
-    
+
 
   </footer>
 
