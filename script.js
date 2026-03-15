@@ -9,7 +9,7 @@ window.addEventListener("scroll", () => {
 
     const sectionTop = section.offsetTop - 150;
 
-    if(pageYOffset >= sectionTop){
+    if (pageYOffset >= sectionTop) {
       current = section.getAttribute("id");
     }
 
@@ -19,7 +19,7 @@ window.addEventListener("scroll", () => {
 
     link.classList.remove("active");
 
-    if(link.getAttribute("href") === "#" + current){
+    if (link.getAttribute("href") === "#" + current) {
       link.classList.add("active");
     }
 
@@ -27,7 +27,7 @@ window.addEventListener("scroll", () => {
 
 });
 
-function reveal(){
+function reveal() {
 
   const elements = document.querySelectorAll(".reveal");
 
@@ -36,7 +36,7 @@ function reveal(){
     const windowHeight = window.innerHeight;
     const elementTop = el.getBoundingClientRect().top;
 
-    if(elementTop < windowHeight - 100){
+    if (elementTop < windowHeight - 100) {
       el.classList.add("active");
     }
 
@@ -51,56 +51,63 @@ reveal();
 
 
 
+const slider = document.getElementById("slider");
 
+let pos = 0;
+const largura = 290;
 
-const slider = document.querySelector(".certificados-container");
-let cards = document.querySelectorAll(".certificado");
+/* CLONAR OS 3 PRIMEIROS */
 
-const visible = 3;
-const cardWidth = 320; // 280 + 40 gap
+const itens = slider.children;
 
-// clonar primeiros e últimos cards
-for(let i = 0; i < visible; i++){
-  const firstClone = cards[i].cloneNode(true);
-  const lastClone = cards[cards.length - 1 - i].cloneNode(true);
-
-  slider.appendChild(firstClone);
-  slider.insertBefore(lastClone, slider.firstChild);
+for (let i = 0; i < 3; i++) {
+  let clone = itens[i].cloneNode(true);
+  slider.appendChild(clone);
 }
 
-cards = document.querySelectorAll(".certificado");
+function mover(direcao) {
 
-let index = visible;
+  pos += direcao;
 
-slider.style.transform = `translateX(-${index * cardWidth}px)`;
+  slider.style.transition = "transform 0.6s ease";
 
-// mover
-function mover(direcao){
-  index += direcao;
+  slider.style.transform = `translateX(${-pos * largura}px)`;
 
-  slider.style.transition = "transform 0.5s ease";
-  slider.style.transform = `translateX(-${index * cardWidth}px)`;
+  /* quando chegar no final */
+
+  if (pos >= itens.length - 3) {
+
+    setTimeout(() => {
+
+      slider.style.transition = "none";
+      pos = 0;
+
+      slider.style.transform = `translateX(0px)`;
+
+    }, 600);
+
+  }
+
+  /* quando voltar */
+
+  if (pos < 0) {
+
+    slider.style.transition = "none";
+    pos = itens.length - 4;
+
+    slider.style.transform = `translateX(${-pos * largura}px)`;
+
+  }
+
 }
 
-// quando termina animação
-slider.addEventListener("transitionend", () => {
+/* POPUP */
 
-  if(index >= cards.length - visible){
-    slider.style.transition = "none";
-    index = visible;
-    slider.style.transform = `translateX(-${index * cardWidth}px)`;
-  }
+function abrir(src) {
+  document.getElementById("popup").style.display = "flex";
+  document.getElementById("imgPopup").src = src;
+}
 
-  if(index < visible){
-    slider.style.transition = "none";
-    index = cards.length - visible*2;
-    slider.style.transform = `translateX(-${index * cardWidth}px)`;
-  }
-
-});
-
-// autoplay
-setInterval(()=>{
-  mover(1);
-},4000);
-
+function fechar() {
+  document.getElementById("popup").style.display = "none";
+}
