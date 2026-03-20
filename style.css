@@ -483,12 +483,14 @@ h1 {
   margin-top: 40px;
   transition: transform 0.6s ease;
   /* animação suave */
+  scroll-snap-type: x mandatory;
 }
 
 /* CARD */
 
 .certificado {
   flex: 0 0 260px;
+  scroll-snap-align: center;
 
   background: rgba(20, 10, 40, 0.6);
   backdrop-filter: blur(10px);
@@ -551,6 +553,8 @@ h1 {
   overflow: hidden;
   margin: auto;
   padding: 20px;
+    overflow: hidden; /* PC e tablet */
+  scroll-behavior: smooth;
 }
 
 /* ========================= */
@@ -741,4 +745,124 @@ h1 {
       transparent,
       rgb(255, 217, 0),
       transparent);
+}
+
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 1024px) {
+
+  /* MENU */
+  .menu {
+    width: 90%;
+    padding: 12px 20px;
+  }
+
+  .menu ul {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* SOBRE */
+  .conteudo {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .nome-container {
+    flex-direction: column;
+  }
+
+  .logo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .nome {
+    font-size: 42px;
+  }
+
+  .sobre p {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .especialidades {
+    margin: 20px auto;
+  }
+
+  .foto {
+    width: 260px;
+    height: 260px;
+    margin: 20px auto;
+  }
+
+  /* SKILLS */
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hard-skills,
+  .soft-skills {
+    width: 90%;
+  }
+
+  /* PROJETOS */
+  .card {
+    width: 90%;
+    height: auto;
+  }
+
+  /* Só no celular */
+@media (max-width: 600px) {
+  .janela {
+    overflow-x: auto;
+  }
+}
+
+/* Esconde a barra no Chrome, Edge e Safari */
+.janela::-webkit-scrollbar {
+  display: none;
+}
+
+/* Esconde no Firefox */
+.janela {
+  scrollbar-width: none;
+}
+
+  @media (max-width: 600px) {
+  .seta {
+    display: none;
+  }
+}
+}
+
+
+/* TELAS MUITO PEQUENAS */
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .nome {
+    font-size: 32px;
+  }
+
+  .menu a {
+    font-size: 11px;
+  }
+
+  .footer h2 {
+    font-size: 24px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 15px;
+
+  }
 }
